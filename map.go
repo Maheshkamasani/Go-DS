@@ -1,31 +1,19 @@
-// Go program to illustrate how to add 
-// a key-value pair in the map using 
-// make() function 
-package main 
+package main
 
 import "fmt"
 
-// Main function 
-func main() { 
+var nameAgeMap map[string]int
 
-	// Creating and initializing a map 
-	m_a_p := map[int]string{ 
-		90: "Dog", 
-		91: "Cat", 
-		92: "Cow", 
-		93: "Bird", 
-		94: "Rabbit", 
-	} 
+func main() {
 
-	fmt.Println("Original map: ", m_a_p) 
+	nameAgeMap = map[string]int{
+		"James": 50,
+		"Ali":   39,
+	}
+	fmt.Println("Print the age of James: ", nameAgeMap["James"])
 
-	// Adding new key-value pairs in the map 
-	m_a_p[95] = "Parrot"
-	m_a_p[96] = "Crow"
-	fmt.Println("Map after adding new key-value pair:\n", m_a_p) 
-
-	// Updating values of the map 
-	m_a_p[91] = "PIG"
-	m_a_p[93] = "DONKEY"
-	fmt.Println("\nMap after updating values of the map:\n", m_a_p) 
-} 
+	//We can range through the map and print each value:
+	for key, value := range nameAgeMap {
+		fmt.Printf("%v is %d years old\n", key, value)
+	}
+}

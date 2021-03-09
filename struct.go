@@ -10,7 +10,7 @@ type Book struct {
 	name string
 	author string 
 	pages int
-	
+
 }
 
 func (book Book) print_details() {
@@ -25,8 +25,6 @@ func main() {
 	book1.print_details()
 	book1.name = "Kloudone"
 	book1.pages = 2122
-
-
-
 book1.print_details()
+
 }

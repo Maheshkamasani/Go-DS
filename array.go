@@ -2,13 +2,26 @@ package main
 
 import "fmt"
 
-func main() {
-	var theArray [3]string
-	theArray[0] = "India"  // Assign a value to the first element
-	theArray[1] = "Canada" // Assign a value to the second element
-	theArray[2] = "Japan"  // Assign a value to the third element
+//Package scope array definition
+var integerArray [5]int
 
-	fmt.Println(theArray[0]) // Access the first element value
-	fmt.Println(theArray[1]) // Access the second element value
-	fmt.Println(theArray[2]) // Access the third element value
+var stringArray [4]string
+
+func main() {
+
+	integerArray[0] = 10
+	integerArray[1] = 20
+	integerArray[2] = 30
+	integerArray[3] = 40
+	integerArray[4] = 50
+
+	fmt.Println("This is the integer Array: ", integerArray)
+
+	stringArray[0] = "first"
+	stringArray[1] = "second"
+	stringArray[2] = "third"
+	stringArray[3] = "fourth"
+
+	fmt.Println("This is the string array: ", stringArray)
+
 }
